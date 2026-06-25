@@ -158,15 +158,15 @@
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="#dataset" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-database"></i></span>
-                      <span>Dataset</span>
+                    <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" tabindex="-1" title="arXiv coming soon">
+                      <span class="icon"><i class="fas fa-file-alt"></i></span>
+                      <span>arXiv</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" title="arXiv coming soon">
-                      <span class="icon"><i class="ai ai-arxiv"></i></span>
-                      <span>arXiv</span>
+                    <a href="#dataset" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Dataset</span>
                     </a>
                   </span>
                 </div>
@@ -199,9 +199,11 @@
           <div class="column is-full">
             <h2 class="title is-3">Method Overview</h2>
             <img class="result-image" src="static/images/method_overview.png" alt="Method overview figure" loading="lazy">
-            <h2 class="subtitle has-text-centered mt-4">
-              Look-Before-Move first decides what should be observed under narrative intent, then grounds the selected visual attention into feasible camera motion.
-            </h2>
+            <div class="content has-text-justified mt-4">
+              <p>
+                Look-Before-Move separates observation specification from motion execution. It first builds a Semantic Observation Contract from narrative intent, then uses Monte Carlo Viewpoint Search to identify viewpoints that satisfy semantic and geometric constraints, and finally applies Semantic Trajectory Grounding to connect selected viewpoints into smooth, collision-aware camera motion.
+              </p>
+            </div>
             <p class="has-text-centered mt-3">
               <a href="static/pdfs/method_overview.pdf" target="_blank">Open the original PDF</a>
             </p>
