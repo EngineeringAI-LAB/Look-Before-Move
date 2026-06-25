@@ -1,0 +1,32 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+accelerate==1.13.0
+aiohttp==3.12.15
+any-llm-sdk==1.7.0
+av==17.0.1
+decord==0.6.0
+google-genai==1.45.0
+huggingface_hub==1.8.0
+matplotlib==3.10.9
+numpy==2.4.4
+openai==2.30.0
+opencv-python==4.13.0.92
+pandas==2.3.3
+pillow==11.3.0
+psutil==7.2.2
+PyYAML==6.0.3
+qwen-vl-utils[decord]==0.0.14
+requests==2.32.5
+rich==14.3.3
+scikit-image==0.26.0
+scikit-learn==1.8.0
+scipy==1.17.1
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+tqdm==4.67.3
+transformers==5.7.0
+ultralytics==8.4.45
+
+# Optional stronger metric backends:
+# insightface==0.7.3
+# onnxruntime-gpu==1.25.1

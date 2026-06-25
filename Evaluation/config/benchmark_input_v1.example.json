@@ -1,0 +1,29 @@
+{
+  "dataset_name": "storyblender_sample",
+  "method_name": "closeup_strategy_v2",
+  "fps": 24,
+  "global_story_prompt": "A generated film sequence.",
+  "subjects": [
+    {
+      "subject_id": "primary_actor",
+      "display_name": "Primary Actor",
+      "type": "person",
+      "reference_images": [],
+      "text_prompt": "person"
+    }
+  ],
+  "segments": [
+    {
+      "segment_id": "scene_001_shot_001_cam1",
+      "order_index": 0,
+      "video_path": "VideoEngineer/output/<run_id>/clips/scene_001_shot_001_cam1.mp4",
+      "prompt_text": "The primary actor enters and looks toward the camera.",
+      "event_description": "Actor enters.",
+      "expected_subject_ids": ["primary_actor"],
+      "expected_shot_size": "medium",
+      "expected_semantic_target": "full_body",
+      "expected_camera_angle": "front",
+      "expected_motion": "dolly"
+    }
+  ]
+}

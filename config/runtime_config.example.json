@@ -1,0 +1,11 @@
+{
+  "shared": {
+    "blender_exe": "",
+    "vision_model": "gemini-3-flash-preview",
+    "anyllm_api_key": "",
+    "anyllm_api_base": "",
+    "anyllm_provider": "openai"
+  },
+  "director": {},
+  "cinematographer": {}
+}

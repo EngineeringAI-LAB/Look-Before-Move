@@ -1,0 +1,17 @@
+--extra-index-url https://download.pytorch.org/whl/cu128
+numpy
+opencv-python
+google-genai
+openai
+torch==2.11.0+cu128
+torchvision==0.26.0+cu128
+transformers==5.7.0
+accelerate==1.13.0
+qwen-vl-utils[decord]==0.0.14
+decord==0.6.0
+av==17.0.1
+ultralytics==8.4.45
+
+# Optional stronger metric backends:
+# insightface
+# onnxruntime-gpu

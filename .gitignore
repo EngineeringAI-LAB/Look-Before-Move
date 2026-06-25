@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments and local secrets
+.venv/
+venv/
+env/
+.env
+config/runtime_config.json
+config/storyblender_runtime_config.json
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Runtime outputs
+output/
+**/output/
+outputs/
+exports/
+run_logs/
+logs/
+*_stdout.log
+*_stderr.log
+*.log
+
+# Data, media, and model assets
+scripts/
+data/
+datasets/
+benchmark/
+reference/
+Evaluation/models/
+Evaluation/reference/
+Evaluation/output/
+*.blend
+*.blend1
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# Paper artifacts
+overleaf/
+figure/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
