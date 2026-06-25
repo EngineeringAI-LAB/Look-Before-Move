@@ -201,7 +201,7 @@
             <img class="result-image" src="static/images/method_overview.png" alt="Method overview figure" loading="lazy">
             <div class="content has-text-justified mt-4">
               <p>
-                Look-Before-Move separates observation specification from motion execution. It first builds a Semantic Observation Contract from narrative intent, then uses Monte Carlo Viewpoint Search to identify viewpoints that satisfy semantic and geometric constraints, and finally applies Semantic Trajectory Grounding to connect selected viewpoints into smooth, collision-aware camera motion.
+                Overview of the benchmark construction and Look-Before-Move framework. (a) We build a dynamic 3D story-world benchmark using <em>StoryBlender</em>, covering narrative scripts, controllable scenes, character animations, camera annotations, and dataset statistics. (b) Look-Before-Move converts narrative intent into an observation contract, searches and refines feasible viewpoints in the executable 3D world, and grounds selected views into temporally coherent camera trajectories.
               </p>
             </div>
             <p class="has-text-centered mt-3">
@@ -219,12 +219,12 @@
           <div id="results-carousel" class="carousel results-carousel">
             <div class="item">
               <img class="result-image" src="static/images/attention_qualitative.png" alt="Narrative attention qualitative visualization" loading="lazy">
-              <h2 class="subtitle has-text-centered">Metric-grounded visual attention highlights narrative targets across shots.</h2>
+              <h2 class="subtitle has-text-centered">Qualitative visualization of world visual attention. Attention maps and trajectories show narrative intent grounded in evidence before execution.</h2>
               <p class="has-text-centered"><a href="static/pdfs/attention_qualitative.pdf" target="_blank">Open the original PDF</a></p>
             </div>
             <div class="item">
               <img class="result-image" src="static/images/qualitative_comparison_grid.png" alt="Qualitative comparison grid" loading="lazy">
-              <h2 class="subtitle has-text-centered">Qualitative comparisons show more stable subject perception, intent consistency, and trajectory quality.</h2>
+              <h2 class="subtitle has-text-centered">Qualitative comparison on representative story segments. Rows pair narrative instructions with outputs from our method and baselines, testing subject identity, action cues, spatial context, and story-relevant framing.</h2>
               <p class="has-text-centered"><a href="static/pdfs/qualitative_comparison_grid.pdf" target="_blank">Open the original PDF</a></p>
             </div>
           </div>
