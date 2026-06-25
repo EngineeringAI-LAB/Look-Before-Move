@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="Look-Before-Move">
+  <meta name="description" content="Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.">
+  <meta name="keywords" content="camera planning, embodied AI, world models, visual attention, 3D story worlds, Blender, narrative-grounded viewpoint selection">
+  <meta name="author" content="Jiaming Bian, Bingliang Li, Yuehao Wu, Pichao Wang, Zhi Wang, Hailan Ma, Huadong Mo, Zhenhong Sun">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="EngineeringAI-LAB">
+  <meta property="og:title" content="Look-Before-Move">
+  <meta property="og:description" content="Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.">
+  <meta property="og:url" content="https://engineeringai-lab.github.io/Look-Before-Move/">
+  <meta property="og:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Look-Before-Move project preview">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Camera Planning">
+  <meta property="article:tag" content="Embodied AI">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Look-Before-Move">
+  <meta name="twitter:description" content="Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.">
+  <meta name="twitter:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Look-Before-Move project preview">
+
+  <meta name="citation_title" content="Look-Before-Move">
+  <meta name="citation_author" content="Bian, Jiaming">
+  <meta name="citation_author" content="Li, Bingliang">
+  <meta name="citation_author" content="Wu, Yuehao">
+  <meta name="citation_author" content="Wang, Pichao">
+  <meta name="citation_author" content="Wang, Zhi">
+  <meta name="citation_author" content="Ma, Hailan">
+  <meta name="citation_author" content="Mo, Huadong">
+  <meta name="citation_author" content="Sun, Zhenhong">
+
+  <title>Look-Before-Move | Narrative-Grounded World Visual Attention</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <style>
+    .publication-title {
+      line-height: 1.12;
+    }
+    .author-block {
+      margin: 0 0.25rem;
+      white-space: nowrap;
+    }
+    .project-teaser {
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      width: 100%;
+    }
+    .result-image {
+      border-radius: 10px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      width: 100%;
+      background: white;
+    }
+    .button.is-disabled {
+      pointer-events: none;
+      opacity: 0.6;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Look-Before-Move",
+    "description": "Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.",
+    "author": [
+      {"@type": "Person", "name": "Jiaming Bian"},
+      {"@type": "Person", "name": "Bingliang Li"},
+      {"@type": "Person", "name": "Yuehao Wu"},
+      {"@type": "Person", "name": "Pichao Wang"},
+      {"@type": "Person", "name": "Zhi Wang"},
+      {"@type": "Person", "name": "Hailan Ma"},
+      {"@type": "Person", "name": "Huadong Mo"},
+      {"@type": "Person", "name": "Zhenhong Sun"}
+    ],
+    "url": "https://engineeringai-lab.github.io/Look-Before-Move/",
+    "image": "https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png",
+    "keywords": ["camera planning", "embodied AI", "world models", "visual attention", "3D story worlds", "Blender"],
+    "isAccessibleForFree": true
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title">Look-Before-Move</h1>
+              <h2 class="subtitle is-4">Narrative-Grounded World Visual Attention for Camera Planning in Dynamic 3D Story Worlds</h2>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><a href="mailto:bianjiaming@csu.edu.cn">Jiaming Bian</a>,</span>
+                <span class="author-block"><a href="mailto:lbingl@outlook.com">Bingliang Li</a>,</span>
+                <span class="author-block"><a href="mailto:yuehao.wu@unsw.edu.au">Yuehao Wu</a>,</span>
+                <span class="author-block"><a href="mailto:pichaowang@gmail.com">Pichao Wang</a>,</span>
+                <span class="author-block"><a href="mailto:zhiwang@nju.edu.cn">Zhi Wang</a>,</span>
+                <span class="author-block"><a href="mailto:hailanma0413@gmail.com">Hailan Ma</a>,</span>
+                <span class="author-block"><a href="mailto:huadong.mo@unsw.edu.au">Huadong Mo</a><sup>*</sup>,</span>
+                <span class="author-block"><a href="mailto:zhenhongsun1992@outlook.com">Zhenhong Sun</a><sup>*&dagger;</sup></span>
+              </div>
+
+              <div class="is-size-6 publication-authors">
+                <span class="author-block"><sup>*</sup>Corresponding authors.</span>
+                <span class="author-block"><sup>&dagger;</sup>Project leader.</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://github.com/EngineeringAI-LAB/Look-Before-Move" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fab fa-github"></i></span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#dataset" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon"><i class="fas fa-database"></i></span>
+                      <span>Dataset</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img class="project-teaser" src="static/images/method_overview.png" alt="Look-Before-Move method overview" loading="eager">
+          <h2 class="subtitle has-text-centered">
+            Look-Before-Move first decides what should be observed under narrative intent, then grounds the selected visual attention into feasible camera motion.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>As embodied AI and world models increasingly operate in dynamic 3D environments, visual perception must move beyond passively interpreting given observations toward actively deciding what to observe.</p>
+              <p>We study this problem through camera planning in dynamic 3D story worlds, where the camera must not only generate smooth motion, but also decide what visual evidence should be acquired before it moves. We formulate this capability as <strong>Narrative-Grounded World Visual Attention</strong>, where the camera acts as an embodied observer that determines what to observe, how to compose the observation, and how to shift attention over time under narrative intent and physical 3D constraints.</p>
+              <p>To realize this capability, we propose <strong>Look-Before-Move</strong>, a camera planning framework that separates observation specification from motion execution. It first builds a Semantic Observation Contract to convert directorial intent into executable visual constraints, then performs Monte Carlo Viewpoint Search to find narrative-compliant and geometrically feasible viewpoints, and finally applies Semantic Trajectory Grounding to connect selected viewpoints into continuous, collision-aware, and temporally coherent camera motion.</p>
+              <p>We further construct a dynamic 3D Story World Benchmark based on <em>StoryBlender</em>, covering 50 stories, 457 scenes, and 1585 shots with animated characters, semantic scene configurations, and executable 3D environments. Experiments show that our framework improves subject perception, intent consistency, and trajectory quality over representative baselines, demonstrating the importance of organizing visual attention before generating camera motion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Method Overview</h2>
+            <img class="result-image" src="static/images/method_overview.png" alt="Method overview figure" loading="lazy">
+            <p class="has-text-centered mt-3">
+              <a href="static/pdfs/method_overview.pdf" target="_blank">Open the original PDF</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-small is-light">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img class="result-image" src="static/images/attention_qualitative.png" alt="Narrative attention qualitative visualization" loading="lazy">
+              <h2 class="subtitle has-text-centered">Metric-grounded visual attention highlights narrative targets across shots.</h2>
+              <p class="has-text-centered"><a href="static/pdfs/attention_qualitative.pdf" target="_blank">Open the original PDF</a></p>
+            </div>
+            <div class="item">
+              <img class="result-image" src="static/images/qualitative_comparison_grid.png" alt="Qualitative comparison grid" loading="lazy">
+              <h2 class="subtitle has-text-centered">Qualitative comparisons show more stable subject perception, intent consistency, and trajectory quality.</h2>
+              <p class="has-text-centered"><a href="static/pdfs/qualitative_comparison_grid.pdf" target="_blank">Open the original PDF</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dataset">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Dataset</h2>
+            <div class="content has-text-justified">
+              <p>
+                We construct a dynamic 3D Story World Benchmark based on <em>StoryBlender</em>, covering 50 stories, 457 scenes, and 1585 shots with animated characters, semantic scene configurations, and executable 3D environments.
+              </p>
+              <p>
+                The dataset release package and download instructions will be added here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{bian2026lookbeforemove,
+  title={Look-Before-Move},
+  author={Jiaming Bian and Bingliang Li and Yuehao Wu and Pichao Wang and Zhi Wang and Hailan Ma and Huadong Mo and Zhenhong Sun},
+  year={2026},
+  note={Project page and citation will be updated after the paper release}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
