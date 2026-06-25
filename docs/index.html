@@ -69,16 +69,20 @@
       margin: 0 0.25rem;
       white-space: nowrap;
     }
-    .project-teaser {
-      border-radius: 12px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-      width: 100%;
-    }
     .result-image {
       border-radius: 10px;
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
       width: 100%;
       background: white;
+    }
+    .results-carousel .item {
+      text-align: center;
+    }
+    .results-carousel .item .result-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: min(100%, 1180px);
     }
     .button.is-disabled {
       pointer-events: none;
@@ -142,6 +146,12 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
+                    <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" title="Paper coming soon">
+                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
                     <a href="https://github.com/EngineeringAI-LAB/Look-Before-Move" target="_blank" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fab fa-github"></i></span>
                       <span>Code</span>
@@ -153,21 +163,16 @@
                       <span>Dataset</span>
                     </a>
                   </span>
+                  <span class="link-block">
+                    <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" title="arXiv coming soon">
+                      <span class="icon"><i class="ai ai-arxiv"></i></span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="hero teaser">
-      <div class="container is-max-desktop">
-        <div class="hero-body">
-          <img class="project-teaser" src="static/images/method_overview.png" alt="Look-Before-Move method overview" loading="eager">
-          <h2 class="subtitle has-text-centered">
-            Look-Before-Move first decides what should be observed under narrative intent, then grounds the selected visual attention into feasible camera motion.
-          </h2>
         </div>
       </div>
     </section>
@@ -194,6 +199,9 @@
           <div class="column is-full">
             <h2 class="title is-3">Method Overview</h2>
             <img class="result-image" src="static/images/method_overview.png" alt="Method overview figure" loading="lazy">
+            <h2 class="subtitle has-text-centered mt-4">
+              Look-Before-Move first decides what should be observed under narrative intent, then grounds the selected visual attention into feasible camera motion.
+            </h2>
             <p class="has-text-centered mt-3">
               <a href="static/pdfs/method_overview.pdf" target="_blank">Open the original PDF</a>
             </p>
