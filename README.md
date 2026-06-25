@@ -1,10 +1,10 @@
-# Look-Before-Move
+# 🎬 Look-Before-Move
 
 Look-Before-Move is a narrative-grounded camera planning pipeline for Blender scenes. Given a story/script directory, it builds scene context, searches camera viewpoints, plans motion, renders shot clips, and evaluates the generated result with segment-level cinematic metrics.
 
 The released repository contains code only. Scene assets, story datasets, generated videos, model checkpoints, paper figures, logs, and benchmark outputs are intentionally excluded.
 
-## Pipeline
+## ✨ Overview
 
 The system is organized as four executable stages:
 
@@ -15,7 +15,7 @@ The system is organized as four executable stages:
 
 `Engine/run_full_pipeline.py` runs these stages end to end. `Evaluation/` contains CineStoryEval, the metric pipeline used for SP, IC, and TQ reporting.
 
-## Repository Structure
+## 🧱 Repository Structure
 
 ```text
 Look-Before-Move/
@@ -31,7 +31,9 @@ Look-Before-Move/
 `-- .env.example              # Environment variable template
 ```
 
-## Requirements
+## 🚀 Quick Start
+
+### 1) Requirements
 
 - Windows or Linux with Python 3.11+.
 - Blender 4.5 is recommended. The code calls Blender in background mode and uses `bpy` inside Blender subprocesses.
@@ -52,7 +54,7 @@ python -m pip install -r requirements.txt
 
 If your CUDA/PyTorch version differs, edit the first lines of `requirements.txt` or install a PyTorch wheel that matches your driver before installing the remaining packages.
 
-## Configuration
+### 2) Configuration
 
 Copy the environment template and edit local paths/secrets:
 
@@ -73,7 +75,7 @@ Important variables:
 
 The code also supports `config/runtime_config.json`; use `config/runtime_config.example.json` as a template. Do not commit real API keys.
 
-## Qwen and Evaluator Weights
+## 🧠 Qwen and Evaluator Weights
 
 CineStoryEval can run event-alignment scoring with a local Qwen video-language model. The evaluator loads with `local_files_only=True`, so weights must be prefetched before evaluation.
 
@@ -112,7 +114,7 @@ $env:CINESTORY_YOLO_WEIGHTS = "D:\path\to\yolo11x.pt"
 
 Model directories are ignored by git.
 
-## Input Data Layout
+## 📁 Input Data Layout
 
 Each story directory should contain the Blender scene, story text, formatted models, layout scripts, and related assets. A typical directory looks like:
 
@@ -129,7 +131,7 @@ scripts/
 
 The repository does not include these assets.
 
-## Run One Story
+## 🎥 Run One Story
 
 ```powershell
 $env:STORYBLENDER_BLENDER_EXE = "<path-to-blender>\blender.exe"
@@ -151,7 +153,7 @@ Useful quality options are exposed by `Cinematographer/cinematographer_stage.py`
 - `--disable-trajectory-grounding`
 - `--disable-semantic-height-adjust`
 
-## Run All Stories in Quality Mode
+## 🏃 Run All Stories in Quality Mode
 
 Set the story root and run the batch orchestrator:
 
@@ -171,7 +173,7 @@ $env:LBM_PYTHON_EXE = ".\.venv\Scripts\python.exe"
 
 When `--fixed-stories-from` does not exist, the script discovers all directories under `LBM_SCRIPTS_ROOT` except `demo`.
 
-## Run Evaluation
+## 📊 Run Evaluation
 
 Build benchmark input from a video handoff:
 
@@ -195,7 +197,7 @@ Evaluate with local Qwen:
 
 Use `--vlm-backend none` for a no-VLM smoke test.
 
-## Outputs
+## 📦 Outputs
 
 Generated artifacts are written under stage-local `output/` directories and are ignored by git:
 
@@ -205,6 +207,6 @@ Generated artifacts are written under stage-local `output/` directories and are 
 - `Editor/output/.../exports/final_edit_v1.mp4`
 - `Evaluation/output/.../cinestory_report_v1.json`
 
-## Citation
+## 📚 Citation
 
 Citation information will be updated after the paper/release metadata is finalized.
