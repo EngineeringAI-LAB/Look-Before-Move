@@ -209,4 +209,14 @@ Generated artifacts are written under stage-local `output/` directories and are 
 
 ## 📚 Citation
 
-Citation information will be updated after the paper/release metadata is finalized.
+```bibtex
+@misc{bian2026lookbeforemovenarrativegroundedworldvisual,
+      title={Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds}, 
+      author={Jiaming Bian and Bingliang Li and Yuehao Wu and Pichao Wang and Zhi Wang and Hailan Ma and Huadong Mo and Zhenhong Sun},
+      year={2026},
+      eprint={2606.26964},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2606.26964}, 
+}
+```
