@@ -1,3 +1,5 @@
+[![Look-Before-Move — narrative-grounded world visual attention in dynamic 3D story worlds. AI-generated concept cover.](docs/static/images/story-world-readme-v1.png)](https://engineeringai-lab.github.io/Look-Before-Move/)
+
 # 🎬 Look-Before-Move
 
 Look-Before-Move is a narrative-grounded camera planning pipeline for Blender scenes. Given a story/script directory, it builds scene context, searches camera viewpoints, plans motion, renders shot clips, and evaluates the generated result with segment-level cinematic metrics.

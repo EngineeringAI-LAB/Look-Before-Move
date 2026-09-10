@@ -16,10 +16,10 @@
   <meta property="og:title" content="Look-Before-Move">
   <meta property="og:description" content="Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.">
   <meta property="og:url" content="https://engineeringai-lab.github.io/Look-Before-Move/">
-  <meta property="og:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Look-Before-Move project preview">
+  <meta property="og:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/story-world-readme-v1.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Look-Before-Move — AI-generated 3D story-world concept cover">
   <meta property="article:section" content="Research">
   <meta property="article:tag" content="Camera Planning">
   <meta property="article:tag" content="Embodied AI">
@@ -27,8 +27,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Look-Before-Move">
   <meta name="twitter:description" content="Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.">
-  <meta name="twitter:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="Look-Before-Move project preview">
+  <meta name="twitter:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/story-world-readme-v1.png">
+  <meta name="twitter:image:alt" content="Look-Before-Move — AI-generated 3D story-world concept cover">
 
   <meta name="citation_title" content="Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds">
   <meta name="citation_author" content="Bian, Jiaming">
@@ -45,10 +45,13 @@
 
   <title>Look-Before-Move | Narrative-Grounded World Visual Attention</title>
 
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" href="static/images/look-before-move.ico">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="static/images/look-before-move.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+  <meta name="theme-color" content="#0a1724">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/story-world-hero.css">
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -106,7 +109,7 @@
       {"@type": "Person", "name": "Zhenhong Sun"}
     ],
     "url": "https://engineeringai-lab.github.io/Look-Before-Move/",
-    "image": "https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png",
+    "image": "https://engineeringai-lab.github.io/Look-Before-Move/static/images/story-world-readme-v1.png",
     "keywords": ["camera planning", "embodied AI", "world models", "visual attention", "3D story worlds", "Blender"],
     "isAccessibleForFree": true
   }
@@ -118,13 +121,19 @@
   </button>
 
   <main id="main-content">
-    <section class="hero">
-      <div class="hero-body">
-        <div class="container is-max-desktop">
-          <div class="columns is-centered">
-            <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">Look-Before-Move</h1>
-              <h2 class="subtitle is-4">Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds</h2>
+    <section class="hero story-world-hero" aria-labelledby="paper-title">
+      <img class="story-world-backdrop" src="static/images/story-world-hero-v1.png" width="1774" height="887" alt="" aria-hidden="true" fetchpriority="high">
+      <div class="story-world-shade" aria-hidden="true"></div>
+      <div class="story-world-shell">
+        <nav class="story-world-nav" aria-label="Project">
+          <a class="story-world-brand" href="https://github.com/EngineeringAI-LAB" target="_blank" rel="noopener noreferrer">EngineeringAI-LAB</a>
+          <a class="story-world-dataset-link" href="#dataset">Explore CineBoard3D++ <span aria-hidden="true">↗</span></a>
+        </nav>
+        <div class="story-world-main">
+          <div class="story-world-copy">
+              <p class="story-world-eyebrow"><span aria-hidden="true"></span>3D story worlds · Camera planning</p>
+              <h1 class="title is-1 publication-title" id="paper-title">Look-Before-Move</h1>
+              <p class="story-world-subtitle">Narrative-Grounded World Visual Attention<br class="story-world-desktop-break"> in Dynamic 3D Story Worlds</p>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><a href="mailto:bianjiaming@csu.edu.cn">Jiaming Bian</a>,</span>
@@ -137,41 +146,37 @@
                 <span class="author-block"><a href="mailto:zhenhongsun1992@outlook.com">Zhenhong Sun</a><sup>*&dagger;</sup></span>
               </div>
 
-              <div class="is-size-6 publication-authors">
+              <div class="is-size-6 publication-authors story-world-author-notes">
                 <span class="author-block"><sup>*</sup>Corresponding authors.</span>
                 <span class="author-block"><sup>&dagger;</sup>Project leader.</span>
               </div>
 
-              <div class="column has-text-centered">
-                <div class="publication-links">
-                  <span class="link-block">
-                    <a href="https://arxiv.org/pdf/2606.26964" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                      <span>Paper</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://github.com/EngineeringAI-LAB/Look-Before-Move" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fab fa-github"></i></span>
-                      <span>Code</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://arxiv.org/abs/2606.26964" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="ai ai-arxiv"></i></span>
-                      <span>arXiv</span>
-                    </a>
-                  </span>
-                  <span class="link-block">
-                    <a href="https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon"><i class="fas fa-database"></i></span>
-                      <span>Dataset</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-            </div>
+              <nav class="story-world-actions" aria-label="Research resources">
+                <a href="https://arxiv.org/pdf/2606.26964" target="_blank" rel="noopener noreferrer" class="story-world-resource">
+                  <span class="resource-icon" aria-hidden="true"><i class="far fa-file-alt"></i></span>
+                  <span class="resource-copy"><span class="resource-title">Paper</span><span class="resource-detail">Full text</span></span>
+                  <span class="resource-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href="https://github.com/EngineeringAI-LAB/Look-Before-Move" target="_blank" rel="noopener noreferrer" class="story-world-resource">
+                  <span class="resource-icon" aria-hidden="true"><i class="fab fa-github"></i></span>
+                  <span class="resource-copy"><span class="resource-title">Code</span><span class="resource-detail">GitHub</span></span>
+                  <span class="resource-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href="https://arxiv.org/abs/2606.26964" target="_blank" rel="noopener noreferrer" class="story-world-resource">
+                  <span class="resource-icon" aria-hidden="true"><i class="ai ai-arxiv"></i></span>
+                  <span class="resource-copy"><span class="resource-title">arXiv</span><span class="resource-detail">Preprint</span></span>
+                  <span class="resource-arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href="https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus" target="_blank" rel="noopener noreferrer" class="story-world-resource">
+                  <span class="resource-icon" aria-hidden="true"><i class="fas fa-database"></i></span>
+                  <span class="resource-copy"><span class="resource-title">Dataset</span><span class="resource-detail">CineBoard3D++</span></span>
+                  <span class="resource-arrow" aria-hidden="true">↗</span>
+                </a>
+              </nav>
           </div>
+        </div>
+        <div class="story-world-footer">
+          <p class="story-world-sequence"><span>Observe</span><span aria-hidden="true">→</span><span>Compose</span><span aria-hidden="true">→</span><span>Move</span></p>
         </div>
       </div>
     </section>

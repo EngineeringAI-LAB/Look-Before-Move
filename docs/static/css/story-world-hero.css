@@ -1,0 +1,308 @@
+/* Concept artwork is decorative. Titles, authors and resource links remain HTML. */
+.story-world-hero {
+  background: #0a1420;
+  color: #f4f8ff;
+  isolation: isolate;
+  min-height: 750px;
+  animation: none;
+}
+
+.story-world-backdrop,
+.story-world-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.story-world-backdrop {
+  object-fit: cover;
+  object-position: center;
+  z-index: -3;
+}
+
+.story-world-shade {
+  z-index: -2;
+  background:
+    linear-gradient(0deg, rgba(7, 17, 27, .95), transparent 25%, transparent 84%, rgba(7, 17, 27, .6)),
+    linear-gradient(90deg, rgba(7, 17, 27, .94) 0%, rgba(7, 17, 27, .83) 29%, rgba(7, 17, 27, .48) 48%, rgba(7, 17, 27, .04) 70%);
+}
+
+.story-world-shell {
+  width: min(100%, 1440px);
+  margin: 0 auto;
+  padding: 0 64px;
+}
+
+.story-world-nav {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid rgba(204, 226, 246, .16);
+}
+
+.story-world-nav a {
+  color: #d6e4f1;
+  font-size: .8rem;
+  font-weight: 500;
+}
+
+.story-world-nav a:hover { color: #fff; }
+
+.story-world-nav .story-world-brand {
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  font-size: .75rem;
+  font-weight: 700;
+}
+
+.story-world-dataset-link span { margin-left: 8px; }
+
+.story-world-main {
+  display: flex;
+  align-items: center;
+  min-height: 578px;
+  padding: 66px 0 52px;
+}
+
+.story-world-copy { width: min(100%, 685px); }
+
+.story-world-eyebrow {
+  color: #a9d6e7;
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.story-world-eyebrow > span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #82dcf1;
+  box-shadow: 0 0 16px rgba(112, 209, 237, .45);
+  flex-shrink: 0;
+}
+
+.story-world-hero .publication-title {
+  font-size: clamp(3rem, 5vw, 4.4rem) !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  letter-spacing: -.045em;
+  margin: 0 0 24px !important;
+  line-height: 1.08 !important;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, .15);
+}
+
+.story-world-subtitle {
+  color: #dbe5ef;
+  font-size: clamp(1.1rem, 1.6vw, 1.375rem);
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 30px;
+  max-width: 625px;
+}
+
+.story-world-hero .publication-authors {
+  max-width: 590px;
+  font-size: .94rem !important;
+  line-height: 1.95;
+  color: #d3dce6;
+  margin-bottom: 12px;
+}
+
+.story-world-hero .author-block { margin: 0 .23rem 0 0; }
+
+.story-world-hero .publication-authors a {
+  color: #e6edf5 !important;
+  font-weight: 500;
+}
+
+.story-world-hero .publication-authors a:hover { color: #a4e3f6 !important; }
+.story-world-hero .publication-authors a::after { background: #8bd8ee; }
+
+.story-world-hero .story-world-author-notes {
+  color: #aebdce;
+  font-size: .71rem !important;
+  line-height: 1.7;
+  margin-bottom: 31px;
+}
+
+.story-world-author-notes .author-block { margin-right: 14px; }
+
+.story-world-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  width: min(100%, 615px);
+  margin-top: 5px;
+}
+
+.story-world-resource {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) 10px;
+  gap: 11px;
+  align-items: center;
+  padding: 11px 18px;
+  min-height: 64px;
+  color: #eff6fd;
+  text-decoration: none;
+  background: none;
+  border-radius: 2px;
+}
+
+.story-world-resource:first-child { padding-left: 0; }
+.story-world-resource:last-child { padding-right: 0; }
+
+.story-world-resource + .story-world-resource::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 31px;
+  width: 1px;
+  background: rgba(161, 193, 216, .23);
+}
+
+.resource-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  color: #b4cddb;
+  transition: color .18s ease;
+}
+
+.resource-copy { display: flex; flex-direction: column; gap: 3px; }
+
+.resource-title {
+  width: fit-content;
+  position: relative;
+  font-size: .94rem;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.resource-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #a4e3f6;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .18s ease;
+}
+
+.resource-detail {
+  font-size: .66rem;
+  line-height: 1.6;
+  color: #a6b9ca;
+  white-space: nowrap;
+}
+
+.resource-arrow {
+  color: #8ba4b9;
+  font-size: .86rem;
+  align-self: start;
+  margin-top: 3px;
+  transition: color .18s ease, transform .18s ease;
+}
+
+.story-world-resource:hover,
+.story-world-resource:focus-visible,
+.story-world-resource:hover .resource-icon { color: #a4e3f6; }
+
+.story-world-resource:hover .resource-title::after,
+.story-world-resource:focus-visible .resource-title::after { transform: scaleX(1); }
+
+.story-world-resource:hover .resource-arrow { color: #d2f3ff; transform: translate(2px, -2px); }
+
+.story-world-footer {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border-top: 1px solid rgba(204, 226, 246, .16);
+}
+
+.story-world-sequence {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: .73rem;
+  letter-spacing: .04em;
+  color: #c7d9e8;
+}
+
+.story-world-sequence [aria-hidden] { color: #6897b2; }
+
+.story-world-hero a:focus-visible {
+  outline: 2px solid #a4e3f6;
+  outline-offset: 5px;
+}
+
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  .story-world-shell { padding: 0 38px; }
+  .story-world-shade {
+    background: linear-gradient(90deg, rgba(7, 17, 27, .95), rgba(7, 17, 27, .74) 45%, rgba(7, 17, 27, .14)),
+      linear-gradient(0deg, #0a1420, transparent 30%);
+  }
+  .story-world-copy { width: 640px; }
+}
+
+@media screen and (max-width: 768px) {
+  .story-world-hero { min-height: 0; }
+  .story-world-shell { padding: 0 24px; }
+  .story-world-nav { min-height: 65px; gap: 16px; }
+  .story-world-nav .story-world-brand { font-size: .58rem; letter-spacing: .1em; }
+  .story-world-nav .story-world-dataset-link { font-size: .62rem; }
+  .story-world-dataset-link span { margin-left: 3px; }
+  .story-world-backdrop {
+    height: 470px;
+    object-position: 76% 35%;
+  }
+  .story-world-shade {
+    background: linear-gradient(180deg, rgba(7, 17, 27, .35), rgba(7, 17, 27, .02) 100px, rgba(7, 17, 27, .1) 180px, #0a1420 365px);
+  }
+  .story-world-main { min-height: 0; padding: 250px 0 32px; }
+  .story-world-eyebrow { font-size: .57rem; letter-spacing: .13em; gap: 8px; margin-bottom: 18px; }
+  .story-world-hero .publication-title { font-size: clamp(1.8rem, 8.9vw, 3.65rem) !important; margin-bottom: 19px !important; }
+  .story-world-subtitle { font-size: 1rem; line-height: 1.65; margin-bottom: 22px; }
+  .story-world-desktop-break { display: none; }
+  .story-world-hero .publication-authors { font-size: .81rem !important; line-height: 1.9; }
+  .story-world-hero .story-world-author-notes { font-size: .63rem !important; margin-bottom: 25px; }
+  .story-world-actions { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 8px; }
+  .story-world-resource { padding: 10px 15px; min-height: 62px; }
+  .story-world-resource:nth-child(odd) { padding-left: 0; }
+  .story-world-resource:nth-child(even) { padding-right: 0; }
+  .story-world-resource:nth-child(3)::before { display: none; }
+  .resource-title { font-size: .9rem; }
+  .resource-detail { font-size: .66rem; }
+  .story-world-footer { min-height: 60px; padding: 17px 0; align-items: flex-start; flex-direction: column; gap: 13px; }
+  .story-world-sequence { font-size: .64rem; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .story-world-hero *, .story-world-hero *::after { transition: none !important; }
+}
+
+@media print {
+  .story-world-hero { background: white; color: #14293b; min-height: 0; }
+  .story-world-backdrop, .story-world-shade, .story-world-nav, .story-world-footer { display: none; }
+  .story-world-main { padding: 24px 0; min-height: 0; }
+  .story-world-hero .publication-title, .story-world-subtitle,
+  .story-world-hero .publication-authors, .story-world-hero .publication-authors a,
+  .story-world-eyebrow, .story-world-resource, .resource-icon,
+  .resource-detail, .resource-arrow { color: #14293b !important; }
+}

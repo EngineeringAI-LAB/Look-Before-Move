@@ -58,3 +58,8 @@ figure/
 *.jpg
 *.jpeg
 *.gif
+
+# Explicitly approved project-page concept covers, not generated experiment media.
+!docs/static/images/story-world-hero-v1.png
+!docs/static/images/story-world-readme-v1.png
+!docs/static/images/apple-touch-icon.png
