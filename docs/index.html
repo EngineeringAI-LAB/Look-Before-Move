@@ -30,7 +30,7 @@
   <meta name="twitter:image" content="https://engineeringai-lab.github.io/Look-Before-Move/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="Look-Before-Move project preview">
 
-  <meta name="citation_title" content="Look-Before-Move">
+  <meta name="citation_title" content="Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds">
   <meta name="citation_author" content="Bian, Jiaming">
   <meta name="citation_author" content="Li, Bingliang">
   <meta name="citation_author" content="Wu, Yuehao">
@@ -39,6 +39,9 @@
   <meta name="citation_author" content="Ma, Hailan">
   <meta name="citation_author" content="Mo, Huadong">
   <meta name="citation_author" content="Sun, Zhenhong">
+  <meta name="citation_publication_date" content="2026/06/25">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2606.26964">
+  <link rel="canonical" href="https://engineeringai-lab.github.io/Look-Before-Move/">
 
   <title>Look-Before-Move | Narrative-Grounded World Visual Attention</title>
 
@@ -84,17 +87,13 @@
       margin-right: auto;
       max-width: 100%;
     }
-    .button.is-disabled {
-      pointer-events: none;
-      opacity: 0.6;
-    }
   </style>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "Look-Before-Move",
+    "headline": "Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds",
     "description": "Narrative-grounded world visual attention for semantic viewpoint selection and camera trajectory generation in dynamic 3D story worlds.",
     "author": [
       {"@type": "Person", "name": "Jiaming Bian"},
@@ -125,7 +124,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <h1 class="title is-1 publication-title">Look-Before-Move</h1>
-              <h2 class="subtitle is-4">Narrative-Grounded World Visual Attention for Camera Planning in Dynamic 3D Story Worlds</h2>
+              <h2 class="subtitle is-4">Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds</h2>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block"><a href="mailto:bianjiaming@csu.edu.cn">Jiaming Bian</a>,</span>
@@ -146,7 +145,7 @@
               <div class="column has-text-centered">
                 <div class="publication-links">
                   <span class="link-block">
-                    <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" title="Paper coming soon">
+                    <a href="https://arxiv.org/pdf/2606.26964" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-file-pdf"></i></span>
                       <span>Paper</span>
                     </a>
@@ -158,13 +157,13 @@
                     </a>
                   </span>
                   <span class="link-block">
-                    <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" tabindex="-1" title="arXiv coming soon">
+                    <a href="https://arxiv.org/abs/2606.26964" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="ai ai-arxiv"></i></span>
                       <span>arXiv</span>
                     </a>
                   </span>
                   <span class="link-block">
-                    <a href="#dataset" class="external-link button is-normal is-rounded is-dark">
+                    <a href="https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
                       <span class="icon"><i class="fas fa-database"></i></span>
                       <span>Dataset</span>
                     </a>
@@ -236,14 +235,31 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Dataset</h2>
+            <h2 class="title is-3">CineBoard3D++ Dataset</h2>
             <div class="content has-text-justified">
               <p>
-                We construct a dynamic 3D Story World Benchmark based on <em>StoryBlender</em>, covering 50 stories, 457 scenes, and 1585 shots with animated characters, semantic scene configurations, and executable 3D environments.
+                <strong>CineBoard3D++</strong> is our collection of dynamic 3D story worlds for the 50-story benchmark in <em>Look-Before-Move</em>. Built with <em>StoryBlender</em>, it brings together narrative scripts, editable Blender projects, animated characters, scene assets, and structured JSON configurations for camera planning research.
               </p>
               <p>
-                The dataset release package and download instructions will be added here.
+                Download the available story archives from Hugging Face. Each story is packaged separately as a <code>.tar</code> or <code>.zip</code> file. Extract the complete archive, keep its project folders together, and open the final <code>.blend</code> file in Blender 4.5. See the dataset card for details.
               </p>
+              <p>
+                <strong>Dataset license:</strong> <a href="https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus/blob/main/LICENSE.md" target="_blank" rel="noopener noreferrer">CC BY-NC 4.0</a>. Please cite our paper when using the dataset in your research.
+              </p>
+            </div>
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon" aria-hidden="true"><i class="fas fa-database"></i></span>
+                  <span>Hugging Face Dataset</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus/tree/main/stories" target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon" aria-hidden="true"><i class="fas fa-download"></i></span>
+                  <span>Browse Story Archives</span>
+                </a>
+              </span>
             </div>
           </div>
         </div>

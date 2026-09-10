@@ -2,7 +2,17 @@
 
 Look-Before-Move is a narrative-grounded camera planning pipeline for Blender scenes. Given a story/script directory, it builds scene context, searches camera viewpoints, plans motion, renders shot clips, and evaluates the generated result with segment-level cinematic metrics.
 
-The released repository contains code only. Scene assets, story datasets, generated videos, model checkpoints, paper figures, logs, and benchmark outputs are intentionally excluded.
+This repository contains the implementation and the project website in `docs/`. Scene assets and story datasets are distributed separately through CineBoard3D++; generated videos, model checkpoints, logs, and benchmark outputs are not included here.
+
+[🌐 Project Page](https://engineeringai-lab.github.io/Look-Before-Move/) · [📄 Paper](https://arxiv.org/abs/2606.26964) · [🤗 CineBoard3D++ Dataset](https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus)
+
+## 🗂️ CineBoard3D++ Dataset
+
+CineBoard3D++ provides the dynamic 3D story worlds for our 50-story benchmark: narrative scripts, editable Blender projects, animated characters, scene assets, and structured JSON configurations.
+
+Browse the available [story archives on Hugging Face](https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus/tree/main/stories). Each story is a separate TAR or ZIP. Extract the complete archive, keep the project folders together, and open the final `.blend` file in Blender 4.5. To run the pipeline below, point `--demo-root` at the extracted story folder.
+
+The dataset is licensed under [CC BY-NC 4.0](https://huggingface.co/datasets/EngineeringAI-LAB/CineBoard3D-plus/blob/main/LICENSE.md). See the dataset card for details and cite the paper below when using it.
 
 ## ✨ Overview
 
