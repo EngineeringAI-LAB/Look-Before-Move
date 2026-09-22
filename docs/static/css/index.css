@@ -1,5 +1,7 @@
 /* Modern CSS Variables for consistent theming */
 :root {
+  --page-gutter: clamp(16px, 4.5vw, 64px);
+  --content-width: 1240px;
   --primary-color: #2563eb;
   --primary-hover: #1d4ed8;
   --secondary-color: #64748b;
@@ -36,6 +38,29 @@ body {
   background-color: var(--background-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#main-content > .section,
+#main-content > .hero > .hero-body {
+  padding-inline: var(--page-gutter);
+}
+
+#main-content .container.is-max-desktop {
+  width: 100%;
+  max-width: var(--content-width);
+}
+
+#main-content .content {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  line-height: 1.75;
+}
+
+#main-content .content.has-text-justified {
+  text-align: left !important;
+}
+
+#main-content .title.is-3 {
+  font-size: clamp(1.75rem, 2.8vw, 2.375rem);
 }
 
 
@@ -303,7 +328,8 @@ body {
 
 .results-carousel .subtitle {
   flex: 1;
-  font-size: 1rem !important;
+  font-size: clamp(1.0625rem, 1.4vw, 1.1875rem) !important;
+  line-height: 1.6;
   color: var(--text-secondary);
   margin-top: 1rem;
   font-weight: 500;
