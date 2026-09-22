@@ -125,6 +125,7 @@ $(document).ready(function() {
     var options = {
 		slidesToScroll: 1,
 		slidesToShow: 1,
+		breakpoints: [], // Keep one full-size figure on phones and tablets too.
 		loop: true,
 		infinite: true,
 		autoplay: true,
@@ -133,6 +134,30 @@ $(document).ready(function() {
 
 	// Initialize all div with carousel class
     var carousels = bulmaCarousel.attach('.carousel', options);
+
+    // Bulma only recalculates widths when the number of visible slides changes.
+    // Refresh the existing track on resize without recreating slides or timers.
+    carousels.forEach(function(carousel) {
+        var lastWidth = carousel.wrapper.getBoundingClientRect().width;
+        var resizeCarousel = function() {
+            var width = carousel.wrapper.getBoundingClientRect().width;
+            if (!width || width === lastWidth) return;
+            lastWidth = width;
+            carousel._setDimensions();
+            // A resize can interrupt the animation onto an infinite-loop clone.
+            var length = carousel.state.length;
+            if (length) {
+                carousel.state.next = ((carousel.state.next % length) + length) % length;
+            }
+            carousel.transitioner.apply(true);
+            carousel.onShow();
+        };
+        if ('ResizeObserver' in window) {
+            new ResizeObserver(resizeCarousel).observe(carousel.wrapper);
+        } else {
+            window.addEventListener('resize', resizeCarousel);
+        }
+    });
 	
     bulmaSlider.attach();
     
