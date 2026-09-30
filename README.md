@@ -2,6 +2,8 @@
 
 # 🎬 Look-Before-Move
 
+**Accepted at NeurIPS 2026 (Poster).**
+
 Look-Before-Move is a narrative-grounded camera planning pipeline for Blender scenes. Given a story/script directory, it builds scene context, searches camera viewpoints, plans motion, renders shot clips, and evaluates the generated result with segment-level cinematic metrics.
 
 This repository contains the implementation and the project website in `docs/`. Scene assets and story datasets are distributed separately through CineBoard3D++; generated videos, model checkpoints, logs, and benchmark outputs are not included here.
